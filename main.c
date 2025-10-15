@@ -26,7 +26,7 @@ int main(void)
     scanf("%20s", buff);
     FILE* f = fopen("pacote.txt", "w");
     fprintf(f, "%s\n", buff);
-
+    fclose(f);
     strcpy(command, "bash verificar.sh");
     system(command);
     return 0;

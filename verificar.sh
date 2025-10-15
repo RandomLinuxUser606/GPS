@@ -1,9 +1,22 @@
-# wget http://192.168.15.63:9999/lista.txt
+#!/bin/bash
+#wget http://192.168.15.63:9999/lista.txt
+
+# Declarando variaveis:
 PACOTE="$(cat pacote.txt)"
 
-if grep -Fxq "$PACOTE" lista.txt; then
+if grep -Fx "$PACOTE" lista.txt; then
   wget http://192.168.15.63:9999/pacotes/"$PACOTE"
-  chmod +x "$PACOTE"
+
+
+
+   
+
+  sudo chmod +x "$PACOTE"
+  ./libs.sh
 else
   echo "Pacote nao encontrado"
 fi
+
+exit
+
+
