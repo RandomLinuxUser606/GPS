@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
+// Por RandomLinuxUser606
 
 int main(void)
 {
@@ -12,11 +12,13 @@ int main(void)
   char resp;
   int pacote;
   char command[50];
+  char caminho[] = "/bin/";
 
-  printf("pakman - teste 1\n");
+
+  // menu
+  printf("pakman - v0.1\n");
   printf("[I]nstalar\n");
   printf("[R]emover\n");
-  printf("[A]tualizar\n");
 
   resp = getchar();
 
@@ -30,13 +32,18 @@ int main(void)
     strcpy(command, "bash verificar.sh");
     system(command);
     return 0;
-
-
-
   }
 
-
-
-
-
+  if (resp == 'R') {
+    printf("Escreva o nome do pacote para ser removido:\n");
+    scanf("%20s", buff);
+    strcat(caminho, buff);
+    if (remove(caminho) == 0) {
+        printf("'%s' deleted.\n", caminho);
+        printf("'%s' deleted.\n", buff);
+        system("bash remove.sh");
+    } else {
+        perror("Error:");
+    }
+  }
 }
