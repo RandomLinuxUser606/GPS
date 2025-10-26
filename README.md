@@ -1,4 +1,5 @@
-# pakman
+# GPS - Gerenciador de pacotes simples
+( O codigo e funcionalidade que é simples, não os pacotes, necessariamente)
 
 Package manager educacional feito para aprender C e bash. Não use em produção.
 
