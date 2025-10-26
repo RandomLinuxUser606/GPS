@@ -1,1 +1,1 @@
-Aqui esta o registro de todos os pacotes ja instalados
+// Aqui esta o registro de todos os pacotes ja instalados

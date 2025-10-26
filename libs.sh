@@ -8,6 +8,6 @@ while IFS= read -r line; do
 
   echo "Instalado: $line"
   wget -P /usr/lib/ http://192.168.15.63:9999/libs/$line
-  sed -i $(a \ "$PACOTE") logs.txt
+  sed -i "$ a $line" logs.txt
 done <libs.txt
 rm libs.txt
