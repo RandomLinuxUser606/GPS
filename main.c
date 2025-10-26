@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 // Por RandomLinuxUser606
+// GPS - Gerenciador de pacotes simples v1
 
 int main(void)
 {
@@ -16,7 +17,7 @@ int main(void)
 
 
   // menu
-  printf("pakman - v0.1\n");
+  printf("GPS - v1.0\n");
   printf("[I]nstalar\n");
   printf("[R]emover\n");
 
