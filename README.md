@@ -45,14 +45,14 @@ OBS: Os arquivos devem estar em .tar.xz, tirando aqueles que são .txt
 ### Compilação
 
 ```bash
-gcc main.c -o pakman
+gcc main.c -o gps.out
 sudo mv pakman /usr/local/bin/  # ou qualquer dir no PATH
 ```
 
 ## Uso
 
 ```bash
-pakman
+./gps.out
 ```
 
 ### Comandos
