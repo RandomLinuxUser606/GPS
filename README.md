@@ -40,6 +40,7 @@ O pakman espera um servidor HTTP rodando em `192.168.15.63:9999` com a seguinte 
 ```
 
 Você pode usar `python -m http.server 9999` ou qualquer servidor HTTP básico.
+OBS: Os arquivos devem estar em .tar.xz, tirando aqueles que são .txt
 
 ### Compilação
 
