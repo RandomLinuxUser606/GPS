@@ -1,20 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <stdlib.h>
 
 // Por RandomLinuxUser606
 // GPS - Gerenciador de pacotes simples v1
 
-int main(void)
-{
+int main(void) {
   // Declarando variaveis
   char buff[20];
   char resp;
   int pacote;
   char command[50];
   char caminho[] = "/bin/";
-
 
   // menu
   printf("GPS - v1.0\n");
@@ -23,11 +21,10 @@ int main(void)
 
   resp = getchar();
 
-  if (resp == 'I')
-  {
+  if (resp == 'I') {
     printf("escreva o nome do pacote desejado:\n");
     scanf("%20s", buff);
-    FILE* f = fopen("pacote.txt", "w");
+    FILE *f = fopen("pacote.txt", "w");
     fprintf(f, "%s\n", buff);
     fclose(f);
     strcpy(command, "bash verificar.sh");
@@ -40,11 +37,11 @@ int main(void)
     scanf("%20s", buff);
     strcat(caminho, buff);
     if (remove(caminho) == 0) {
-        printf("'%s' deleted.\n", caminho);
-        printf("'%s' deleted.\n", buff);
-        system("bash remove.sh");
+      printf("'%s' deleted.\n", caminho);
+      printf("'%s' deleted.\n", buff);
+      system("bash remove.sh");
     } else {
-        perror("Error:");
+      perror("Error:");
     }
   }
 }
