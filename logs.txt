@@ -1,1 +1,9 @@
 // Aqui esta o registro de todos os pacotes ja instalados
+btop
+btop
+btop
+btop
+btop
+btop
+btop
+btop

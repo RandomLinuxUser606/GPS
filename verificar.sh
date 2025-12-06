@@ -2,10 +2,11 @@
 
 # Declarando variaveis:
 PACOTE="$(cat pacote.txt)"
+mirror="$(cat mirror.txt)"
 
 if grep -Fx "$PACOTE" lista.txt; then
-  wget http://192.168.15.63:9999/pacotes/"$PACOTE".tar.xz
-  tar xfv "$PACOTE".tar.xz "$PACOTE"
+  wget http://"$mirror":9999/pacotes/"$PACOTE".tar.xz
+  tar xfv "$PACOTE".tar.xz
   rm "$PACOTE".tar.xz
   sudo chmod +x "$PACOTE"
   sudo mv "$PACOTE" /usr/bin/
